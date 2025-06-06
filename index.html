@@ -1,89 +1,141 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hacked by Vinzz</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #007bff, #00c6ff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-    }
-    .login-container {
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      width: 350px;
-    }
-    .login-container h2 {
+      background-color: #000;
+      font-family: 'Courier New', monospace;
+      color: #ff0000;
       text-align: center;
-      color: #333;
-      margin-bottom: 20px;
+      overflow-x: hidden;
     }
-    .form-group {
-      margin-bottom: 15px;
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(255,0,0,0.05),
+        rgba(255,0,0,0.05) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      z-index: -1;
+      animation: flicker 1.2s infinite alternate;
     }
-    .form-group label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 5px;
-      color: #555;
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      100% { opacity: 0.93; }
     }
-    .form-group input {
+
+    img {
+      margin-top: 30px;
+      width: 180px;
+      animation: float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px red);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 20px 0;
+      color: red;
+      text-shadow: 0 0 10px white, 0 0 20px red;
+    }
+
+    .typewriter {
+      display: inline-block;
+      overflow: hidden;
+      border-right: .15em solid red;
+      white-space: nowrap;
+      font-size: 18px;
+      margin: 30px auto;
+      animation: typing 5s steps(50, end) forwards, blink-caret .75s step-end infinite;
+      color: #ff0000;
+      max-width: 90%;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 90%; }
+    }
+
+    @keyframes blink-caret {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: red; }
+    }
+
+    .threat {
+      font-size: 1.2em;
+      color: #fff;
+      margin: 30px auto;
+      text-shadow: 0 0 10px red;
+      width: 80%;
+      animation: blink 1.2s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+
+    .warning {
+      position: fixed;
+      bottom: 10px;
       width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .btn {
-      width: 100%;
-      padding: 10px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
       font-size: 16px;
+      color: #fff;
+      text-shadow: 0 0 10px red;
+      animation: moveText 10s linear infinite;
     }
-    .btn:hover {
-      background: #0056b3;
+
+    @keyframes moveText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
-    .footer-text {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 13px;
-      color: #777;
+
+    /* ✅ Mobile fix */
+    @media (max-width: 600px) {
+      .typewriter {
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+        animation: none;
+        width: auto;
+        max-width: 90%;
+      }
     }
   </style>
 </head>
 <body>
+  <img src="https://files.catbox.moe/js8oun.png" alt="Vinzz Official Logo" />
+  <h1>✘ this web has hacked by Vinzz Official ✘</h1>
 
-<div class="login-container">
-  <h2>Please login</h2>
-  <form>
-    <div class="form-group">
-      <label for="nisn">Email</label>
-      <input type="text" id="nisn" name="nisn" placeholder="Input your email" required>
-    </div>
-    <div class="form-group">
-      <label for="nama">Username</label>
-      <input type="text" id="nama" name="nama" placeholder="Input your username" required>
-    </div>
-    <div class="form-group">
-      <label for="password">Kata Sandi</label>
-      <input type="password" id="password" name="password" placeholder="Input your password" required>
-    </div>
-    <button type="submit" class="btn">Login / Register</button>
-  </form>
-  <div class="footer-text">
+  <div class="typewriter">
+    System breached... Access granted to all core files... Initiating takeover protocol...
   </div>
-</div>
 
+  <div class="threat">
+    Your firewall is weak.<br>
+    Your server is mine.<br>
+    I see everything you hide.<br>
+    Backups? Already deleted.<br><br>
+    You were warned. Now you'll pay the price.<br>
+    <strong>Vinzz Owns You.</strong>
+  </div>
+
+  <div class="warning">
+    ⚠ SYSTEM BREACH DETECTED | HACKED BY VINZZ OFFICIAL | NO ESCAPE ⚠
+  </div>
 </body>
 </html>
